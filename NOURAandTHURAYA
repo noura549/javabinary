@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public  static Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int[] arr1 = new int[6];
+
+        System.out.println("FILL array 1");
+        for(int i=0;i<arr1.length;i++){
+            arr1[i]=scan.nextInt();}
+        System.out.println("num");
+        int x = scan.nextInt();
+        search(arr1,x);
+    }
+    public static void search(int[] arr1, int x) {
+        int mid = (arr1.length)/2;
+        int counter=mid;
+        while(true){
+
+            if(x == arr1[mid]){System.out.println("found"+(counter+1)); break;}
+            else if(arr1[mid]<x) {mid = mid+1 ;counter++;}
+            else if (arr1[mid]>x) {mid = mid-1;counter--;}
+            }
+
+    }
+}
